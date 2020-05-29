@@ -1,3 +1,4 @@
+<?php include('Connection.php')?>
 
 <!DOCTYPE HTML>
 <html>
@@ -20,7 +21,9 @@
 			<div class="header-bottom">
 				<div class="header-right w3agile">
 					<div class="header-left-bottom agileinfo">
-					 <form action="Login.php" method="post">
+					 <form action="Login.php" method="POST">
+					 
+					 <?php include('Login_errors.php') ?>
 						<input type="text"  value="User name" name="name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'User name';}"/>
 						<input type="password"  value="Password" name="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'password';}"/>
 						<div class="remember">
@@ -32,9 +35,8 @@
 						 </div>
 						<div class="clear"> </div>
 					  </div>
-					   
-						<input type="submit" name="dangnhap" value="Login">
-						<?php require ('Login_XuLy.php');?>
+						<input type="submit" name="dangnhap" value="Login"> 
+						
 					</form>	
 					<div class="header-left-top">
 						<div class="sign-up"> <h2>or</h2> </div>
