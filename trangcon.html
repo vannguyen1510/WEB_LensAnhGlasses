@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> SIGN IN </title>
+	<link href="Images/logo 2 transper-01.png" rel="shortcut icon">
+	<link href="lens&glasses.html" rel="">
+	<style href="#" rel="stylesheet">
+		body {
+			background:linear-gradient(lightcoral, white);
+			margin:0 auto;
+			padding:0;
+			width:270px;
+			height: 727px;
+		}
+
+		/* style the header */
+
+		div.header {
+			margin-left:41.5%;
+		}
+
+		/* style form in body */
+
+		form {
+		  box-sizing: border-box;
+		  width: 340px;
+		  margin:0 auto;
+		  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+		  padding-bottom: 30px;
+		  border-radius: 4px;
+		  background:#FFF;
+		}
+		form h1 {
+		  box-sizing: border-box;
+		  padding: 10px;
+		}
+
+		input {
+		  margin: 20px 25px;
+		  width: 285px;
+		  display: block;
+		  border: none;
+		  padding: 10px 0;
+		  border-bottom: solid 1px #ffaaaa;
+		  transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+		  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%,lightcoral 4%);
+		  background-position: -300px 0;
+		  background-size: 300px 100%;
+		  background-repeat: no-repeat;
+		  color: lightcoral;
+		}
+		input:focus, input:valid {
+		  box-shadow: none;
+		  outline: none;
+		  background-position: 0 0;
+		}
+		input:focus::-webkit-input-placeholder, input:valid::-webkit-input-placeholder {
+		  color: #ffaaaa;
+		  font-size: 11px;
+		  transform: translateY(-20px);
+		  visibility: visible !important;
+		}
+
+		button {
+		  border: none;
+		  background: #ffaaaa;
+		  cursor: pointer;
+		  border-radius: 3px;
+		  padding: 6px;
+		  width: 200px;
+		  color: white;
+		  margin-left: 20%;
+		  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+		}
+		button:hover {
+		  transform: translateY(-3px);
+		  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
+		}
+		button > a{
+			text-decoration: none;
+			color:white;
+		}
+		marquee > img{
+			 width:150px;
+			height:auto;
+		}
+		.save > input {
+			display:inline;
+			margin:0;
+			padding:0;
+			width:20px;
+		}
+		.save{
+			padding-top:20px; 
+			margin-bottom:15px; 
+			margin-left:15px;
+			float:left;
+		}
+		.forgot{
+			padding:0; 
+			margin-top:6%;
+			float:right;
+			margin-right: 5%;
+		}
+		.or{
+			cursor:default;
+		}
+		.network{
+			margin-left:22%;
+			margin-top:19px;
+		}
+		.network > a img:hover{
+			transform:scale(1.1,1.1);
+		}
+	</style>
+</head>
+
+<body>
+	<marquee><img src="Images/logo.png" alt="logo" width="150px" height="auto"/></marquee>
+	<form>
+	  <h1>SIGN IN</h1>
+	  <input placeholder="Username" type="text" required>
+	  <input placeholder="Password" type="password" required>
+	  <button><a href="lens&glasses.html">Submit</a></button>
+ 	 	<div class="save" ><input type="checkbox" checked/> Saved password</div>
+  			<p class="forgot"><a href="#" >Forgot your password?</a></p>
+  		<button class="or">Or sign in with</button>
+  			<div class="network">
+				<a href="#"><img src="Images/if_facebook_1379466.png" alt="fb"/></a>
+				<a href="#"><img src="Images/if_Instagram-01_1961298.png" alt="fb"/></a>
+				<a href="#"><img src="Images/if_YouTube-01_1961288.png" alt="fb"/></a>
+				<a href="#"><img src="Images/if_Google_plus_1851806.png" alt="fb"/></a>
+  			</div>
+	</form>
+</body>
+</html>

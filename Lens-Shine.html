@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./lib/slick.css">
+	<link rel="stylesheet" href="./lib/slick-theme.css">
+	<link href="style_detail.css" rel="stylesheet">
+	<script src="javascript_detail.js"></script>
+</head>
+	
+<body>
+	<!-- Menu hidden -->
+	<div id="mySidenav" class="sidenav">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	  <a href="lens&glasses.html">Home</a>
+	  <a href="#">Lens</a>
+	  <a href="#">Glasses</a>
+	  <a href="#">Accesorize</a>
+	  <a href="#">Sale</a>
+	</div>
+		<script>
+			function openNav() {
+				document.getElementById("mySidenav").style.width = "250px";
+			}
+			function closeNav() {
+				document.getElementById("mySidenav").style.width = "0";
+			}
+		</script>
+	
+	<!-- Chi tiết sản phẩm -->
+	<img class="logo" src="Images/logo.png" alt="logo"/>
+	<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; OPEN</span>
+	<div class="pageBody">
+		<div class="subPro" >
+			<img src="Images/shine.jpg" alt="subPro"/>
+		</div>
+		<div class="info">
+			
+			<div class="ctrl">
+				<img src="Images/generatedtext (6).png" alt="type"/><br>
+				<div class="fivestar">
+					<img src="Images/if_star_1282964.png" alt="star"/>
+					<img src="Images/if_star_1282964.png" alt="star"/>
+					<img src="Images/if_star_1282964.png" alt="star"/>
+					<img src="Images/if_star_1282964.png" alt="star"/>
+					<img src="Images/if_star_1282964.png" alt="star"/>
+					<div class="vote">7 Đánh giá cho sản phẩm này </div><br>
+				</div>
+				
+				<p class="price"> Giá: 200.000 VNĐ</p>
+				<p class="text">Chọn độ cận:</p>
+				<div class="choose">
+					<select>
+						<option value="eyeleft" selected > Mắt trái </option>
+						<option value="1" > 1 </option>
+						<option value="2" > 2 </option>
+						<option value="3" > 3 </option>
+						<option value="4" > 4 </option>
+						<option value="5" > 5 </option>
+						<option value="6" > 6 </option>
+						<option value="7" > 7 </option>
+						<option value="8" > 8 </option>
+						<option value="9" > 9 </option>
+						<option value="10" > 10 </option>
+					</select>
+					<select>
+						<option value="eyeright" selected > Mắt phải </option>
+						<option value="1" > 1 </option>
+						<option value="2" > 2 </option>
+						<option value="3" > 3 </option>
+						<option value="4" > 4 </option>
+						<option value="5" > 5 </option>
+						<option value="6" > 6 </option>
+						<option value="7" > 7 </option>
+						<option value="8" > 8 </option>
+						<option value="9" > 9 </option>
+						<option value="10" > 10 </option>
+					</select>
+					<div class="text num ord" >Số lượng: <br>
+					<select class="pick" >
+						<option value="1" > 1 </option>
+						<option value="2" > 2 </option>
+						<option value="3" > 3 </option>
+						<option value="4" > 4 </option>
+						<option value="5" > 5 </option>
+						<option value="6" > 6 </option>
+						<option value="7" > 7 </option>
+						<option value="8" > 8 </option>
+						<option value="9" > 9 </option>
+						<option value="10" > 10 </option>
+					</select>
+						</div>
+				</div>
+				
+			</div>
+		
+			<button class="buy"> Đặt hàng ngay </button>
+			<div class="used">
+			<a>Thêm sản phẩm vào giỏ hàng</a><br>
+			<a>Hướng dẫn sử dụng</a><br>
+			<a  style="color:#DC143C"><img src="Images/if_diagram_v2-32_37152.png" alt="truck"/>Miễn phí giao hàng với hoá đơn trên 500.00VNĐ</a>
+			</div>
+			<div class="network">
+				<a href="#"><img src="Images/if_facebook_313654.png" alt="fb"/></a>
+				<a href="#"><img src="Images/if_instagram_313646.png" alt="ins"/></a>
+				<a href="#"><img src="Images/if_youtube_313630.png" alt="you"/></a>
+				<a href="#"><img src="Images/if_twitter_313634.png" alt="tt"/></a>
+  			</div>
+		</div>
+		<!-- Slider Image -->
+	</div>
+	
+	<div class="slider-image">
+		<div><img src="./images/17352219_272523493189114_3905149029541585499_n.jpg" alt=""></div>
+		<div><img src="./Images/17861697_284251498682980_8076090681642949523_n.jpg" alt=""></div>
+		<div><img src="./Images/38758273_224217481613122_1993641471395233792_n.jpg" alt=""></div>
+		<div><img src="./Images/avatar_minachoco_900x900.jpg" alt=""></div>
+		<div><img src="./Images/avatar_NauGoMun_thumb_600x600.jpg" alt=""></div>
+		<div><img src="./Images/avatar_TimSanHo_900x900.jpg" alt=""></div>
+		<div><img src="./Images/avatar_xamtrongoc_thumb_600x600.jpg" alt=""></div>
+		<div><img src="./Images/baby.jpg" alt=""></div>
+	</div>
+	
+	<script src="./jQuery.js"></script>
+	<script src="./lib/slick.min.js"></script>
+	<script>
+		$(document).ready(function(){
+		  $('.slider-image').slick({
+			slidesToShow: 4,
+  			slidesToScroll: 4
+		  });
+		});
+	</script>
+	
+	<!-- FOOTER -->
+	<div id="footer">
+		<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    	<div class="F-left">
+			<p> Lens & Glasses </p>
+			<p>Địa chỉ: Thành phố Biên Hoà, tỉnh Đồng Nai</p>
+			<p>Điện thoại: +84 188 7285932 </p>
+			<p>Email: <a href="mailto:genevievenguyen1510@gmail.com">genevievenguyen1510@gmail.com</a></p>
+		</div>
+		<div class="F-right">
+			<ul>
+				<li><a href="#">Example1</a></li>
+				<li><a href="#">Example2</a></li>
+				<li><a href="#">Example3</a></li>
+				<li class="last"><a href="#">Example4</a></li>
+			</ul>
+			<ul>Bản quyền thuộc về Van Nguyen 1.0 2018</ul>
+		</div>
+	</div>
+</body>
+</html>
