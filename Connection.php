@@ -1,7 +1,4 @@
 <?php
-    session_start();
-    //Initialising variables
-    $errors = array();
 
     // Connect to database
     $servername = "localhost";
@@ -16,9 +13,16 @@
         // If there is an error with the connection, stop the script and display the error.
         die ("Connection failed: ".mysql_connect_error());
     }
+/*
     // Login
-    $username = mysqli_real_escape_string($conn, $_POST['name']);
-    $password = mysqli_real_escape_string($conn, $_POST['password']);
+    // Lấy thông tin từ các textbox 
+		$username = $_POST['name'];
+		$password = md5($_POST['password']);
+    // Ngăn ngừa xung đột MySQL
+		$username = stripcslashes($username);
+		$password = stripcslashes($password);
+		$username = mysql_real_escape_string($conn, $username);
+        $password = mysql_real_escape_string($conn, $password);
 
     // Form validation
     if(empty($username)) 
@@ -30,29 +34,22 @@
         array_push($errors, "Password is required");
     }
 
-    // Check database for existing user with USERNAME
-    $user_check_query = "SELECT * FROM member WHERE username = '".$username."' limit 1";
+    // Check database for existing account
+    $user_check_query = "SELECT * FROM member WHERE username = '.$username.' AND password = '.$password.' limit 1";
     $results = mysqli_query($conn, $user_check_query);
-    $user = mysqli_fetch_assoc($results);
-    if($user)
+    $row = mysqli_fetch_array($results, MYSQL_ASSOC);
+    $check = mysqli_num_rows($results);
+
+    if ($check == 1)
     {
-        if($user['username'] === $username)
-        {
-            array_push($errors, "Username already exists");
-        }
+        echo "<html><a href='lens&glasses.html'></a></html>";
+    }
+    else
+    {
+        echo "that bai";
     }
 
-    // Registers the user if no errors
-    if (count($errors) == 0)
-    {
-        $password = md5($password);
-        $query = "INSERT INTO  member (username, password) VALUES ('$username', '$password')";
-        mysqli_query($conn, $query);
-        $_SESSION['username'] = $username;
-        $_SESSION['success'] = "You are now logged in";
-        header('location: Login_index.php');
-    }
-
+    /*
     //LOGIN user
     if(isset($_POST['dangnhap']))
     {
@@ -83,5 +80,5 @@
             }
         }
     }
-
+    */
 ?>

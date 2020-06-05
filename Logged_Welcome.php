@@ -1,3 +1,11 @@
+<?php
+    include('Login_index.php');
+
+    if(!isset($_SESSION['username']))
+    {
+        header("location: Login.php");
+    }
+?>
 
 <!doctype html>
 <html>
@@ -60,9 +68,8 @@
 					<li><a href="#">SALE</a></li>
 					<li><a href="#">ABOUT US</a></li>
 					<li class="join">
-							<a href="Login.html" target="_self">Sign In</a>
+							<a href="#" target="_self"></a>
 					</li>
-					<li id="cuoi"><a href="#">Sign Up</a></li>
 					<div class="find">
 						<div class="input">
 							<input type="text" placeholder=" Bạn cần tìm gì?"/>

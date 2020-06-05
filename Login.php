@@ -1,20 +1,28 @@
-<?php include('Connection.php')?>
+<?php 
+	
+	//require_once "Login_index.php";
+
+	include('Login_XuLy.php');
+
+	if(isset($_SESSION['username']))
+	{
+		header("location: Logged_Welcome.php");
+	}
+?>
 
 <!DOCTYPE HTML>
 <html>
 <head>
-<script src="JS/jquery.min.js"></script>
-<!-- Custom Theme files -->
-<link href="CSS/style_login.css" rel="stylesheet" type="text/css" media="all"/>
-<!-- for-mobile-apps -->
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
-<!-- //for-mobile-apps -->
-<!--Google Fonts-->
-<link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
+	<script src="JS/jquery.min.js"></script>
+	<link href="CSS/style_login.css" rel="stylesheet" type="text/css" media="all"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	<!--Google Fonts-->
+	<link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
 <!--header start here-->
+
 <div class="header">
 		<div class="header-main">
 		       <h1>Hi there !</h1>
@@ -22,9 +30,8 @@
 				<div class="header-right w3agile">
 					<div class="header-left-bottom agileinfo">
 					 <form action="Login.php" method="POST">
-					 
-					 <?php include('Login_errors.php') ?>
-						<input type="text"  value="User name" name="name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'User name';}"/>
+					
+						<input type="text"  value="User name" name="username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'User name';}"/>
 						<input type="password"  value="Password" name="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'password';}"/>
 						<div class="remember">
 			             <span class="checkbox1">
